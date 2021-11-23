@@ -1,0 +1,319 @@
+<!-- tailwind html page -->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Tailwind HTML</title>
+    <!-- Tailwind core CSS -->
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- main tag with tailwind blue background -->
+    <main class="bg-blue-500">
+        <!-- container tag with tailwind max-w-screen-xl class -->
+        <div class="container mx-auto px-4 pt-8">
+            <!-- h1 tag title with tailwind text-center class -->
+            <h1 class="text-center text-white font-semibold">Chronic Kidney Disease Prediction</h1>
+            <!-- p tag with tailwind text-center class -->
+            <p class="text-center text-white">~~some tag line~~</p>
+        </div>
+
+        <!-- container tag with tailwind max-w-screen-xl class -->
+        <div class="container mx-auto px-4 py-16">
+            <!-- tailwind form -->
+            <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" action="/check" method="post">
+                <!-- h1 tag with tailwind text-center class -->
+                <h1 class="text-center text-blue-500">Enter Patient Details</h1>
+
+                <!-- tailwind input with name: age -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="age">
+                        Age
+                    </label>
+                    <!-- input tag with tailwind bg-gray-200 text-gray-700 border border-gray-200 rounded px-3 py-2 focus:outline-none focus:shadow-outline w-full -->
+                    <input
+                        class="bg-gray-200 text-gray-700 border border-gray-200 rounded px-3 py-2 focus:outline-none focus:shadow-outline w-full"
+                        type="text" name="age" id="age" placeholder="Enter your age">
+                </div>
+
+                <!-- tailwind input with name: blood_pressure -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="blood_pressure">
+                        Blood Pressure
+                    </label>
+                    <!-- input tag with tailwind bg-gray-200 text-gray-700 border border-gray-200 rounded px-3 py-2 focus:outline-none focus:shadow-outline w-full -->
+                    <input
+                        class="bg-gray-200 text-gray-700 border border-gray-200 rounded px-3 py-2 focus:outline-none focus:shadow-outline w-full"
+                        type="text" name="blood_pressure" id="blood_pressure" placeholder="Enter your blood pressure">
+                </div>
+
+                <!-- tailwind input with name: specific_gravity -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="specific_gravity">
+                        Specific Gravity
+                    </label>
+                    <!-- input tag with tailwind bg-gray-200 text-gray-700 border border-gray-200 rounded px-3 py-2 focus:outline-none focus:shadow-outline w-full -->
+                    <input
+                        class="bg-gray-200 text-gray-700 border border-gray-200 rounded px-3 py-2 focus:outline-none focus:shadow-outline w-full"
+                        
+                        type="text" name="specific_gravity" id="specific_gravity"
+                        placeholder="Enter your specific gravity">
+                </div>
+
+                <!-- tailwind input with name: albumin -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="albumin">
+                        Albumin
+                    </label>
+                    <!-- input tag with tailwind bg-gray-200 text-gray-700 border border-gray-200 rounded px-3 py-2 focus:outline-none focus:shadow-outline w-full -->
+                    <input
+                        class="bg-gray-200 text-gray-700 border border-gray-200 rounded px-3 py-2 focus:outline-none focus:shadow-outline w-full"
+                        type="text" name="albumin" id="albumin" placeholder="Enter your albumin">
+                </div>
+
+                <!-- tailwind input with name: sugar -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="sugar">
+                        Sugar
+                    </label>
+                    <!-- input tag with tailwind bg-gray-200 text-gray-700 border border-gray-200 rounded px-3 py-2 focus:outline-none focus:shadow-outline w-full -->
+                    <input
+                        class="bg-gray-200 text-gray-700 border border-gray-200 rounded px-3 py-2 focus:outline-none focus:shadow-outline w-full"
+                        type="text" name="sugar" id="sugar" placeholder="Enter your sugar">
+                </div>
+
+                <!-- tailwind input with name: red_blood_cells -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="red_blood_cells">
+                        Red Blood Cells
+                    </label>
+                    <!-- input tag with tailwind bg-gray-200 text-gray-700 border border-gray-200 rounded px-3 py-2 focus:outline-none focus:shadow-outline w-full -->
+                    <input
+                        class="bg-gray-200 text-gray-700 border border-gray-200 rounded px-3 py-2 focus:outline-none focus:shadow-outline w-full"
+                        type="text" name="red_blood_cells" id="red_blood_cells"
+                        placeholder="Enter your red blood cells">
+                </div>
+
+                <!-- tailwind input with name: pus_cell -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="pus_cell">
+                        Pus Cell
+                    </label>
+                    <!-- input tag with tailwind bg-gray-200 text-gray-700 border border-gray-200 rounded px-3 py-2 focus:outline-none focus:shadow-outline w-full -->
+                    <input
+                        class="bg-gray-200 text-gray-700 border border-gray-200 rounded px-3 py-2 focus:outline-none focus:shadow-outline w-full"
+                        type="text" name="pus_cell" id="pus_cell" placeholder="Enter your pus cell">
+                </div>
+
+                <!-- tailwind input with name: pus_cell_clumps -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="pus_cell_clumps">
+                        Pus Cell Clumps
+                    </label>
+                    <!-- input tag with tailwind bg-gray-200 text-gray-700 border border-gray-200 rounded px-3 py-2 focus:outline-none focus:shadow-outline w-full -->
+                    <input
+                        class="bg-gray-200 text-gray-700 border border-gray-200 rounded px-3 py-2 focus:outline-none focus:shadow-outline w-full"
+                        type="text" name="pus_cell_clumps" id="pus_cell_clumps"
+                        placeholder="Enter your pus cell clumps">
+                </div>
+
+                <!-- tailwind input with name: bacteria -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="bacteria">
+                        Bacteria
+                    </label>
+                    <!-- input tag with tailwind bg-gray-200 text-gray-700 border border-gray-200 rounded px-3 py-2 focus:outline-none focus:shadow-outline w-full -->
+                    <input
+                        class="bg-gray-200 text-gray-700 border border-gray-200 rounded px-3 py-2 focus:outline-none focus:shadow-outline w-full"
+                        type="text" name="bacteria" id="bacteria" placeholder="Enter your bacteria">
+                </div>
+
+                <!-- tailwind input with name: blood_glucose_random -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="blood_glucose_random">
+                        Blood Glucose Random
+                    </label>
+                    <!-- input tag with tailwind bg-gray-200 text-gray-700 border border-gray-200 rounded px-3 py-2 focus:outline-none focus:shadow-outline w-full -->
+                    <input
+                        class="bg-gray-200 text-gray-700 border border-gray-200 rounded px-3 py-2 focus:outline-none focus:shadow-outline w-full"
+                        type="text" name="blood_glucose_random" id="blood_glucose_random"
+                        placeholder="Enter your blood glucose random">
+                </div>
+
+                <!-- tailwind input with name: blood_urea -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="blood_urea">
+                        Blood Urea
+                    </label>
+                    <!-- input tag with tailwind bg-gray-200 text-gray-700 border border-gray-200 rounded px-3 py-2 focus:outline-none focus:shadow-outline w-full -->
+                    <input
+                        class="bg-gray-200 text-gray-700 border border-gray-200 rounded px-3 py-2 focus:outline-none focus:shadow-outline w-full"
+                        type="text" name="blood_urea" id="blood_urea" placeholder="Enter your blood urea">
+                </div>
+
+                <!-- tailwind input with name: serum_creatinine -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="serum_creatinine">
+                        Serum Creatinine
+                    </label>
+                    <!-- input tag with tailwind bg-gray-200 text-gray-700 border border-gray-200 rounded px-3 py-2 focus:outline-none focus:shadow-outline w-full -->
+                    <input
+                        class="bg-gray-200 text-gray-700 border border-gray-200 rounded px-3 py-2 focus:outline-none focus:shadow-outline w-full"
+                        type="text" name="serum_creatinine" id="serum_creatinine"
+                        placeholder="Enter your serum creatinine">
+                </div>
+
+                <!-- tailwind inputs with names: sodium,potassium, haemoglobin, packed_cell_volume, white_blood_cell_count, red_blood_cell_count, hypertension, diabetes_mellitus, coronary_artery_disease, appetite,peda_edema, anemia -->
+
+                <!-- tailwind input with name: sodium -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="sodium">
+                        Sodium
+                    </label>
+                    <!-- input tag with tailwind bg-gray-200 text-gray-700 border border-gray-200 rounded px-3 py-2 focus:outline-none focus:shadow-outline w-full -->
+                    <input
+                        class="bg-gray-200 text-gray-700 border border-gray-200 rounded px-3 py-2 focus:outline-none focus:shadow-outline w-full"
+                        type="text" name="sodium" id="sodium" placeholder="Enter your sodium">
+                </div>
+
+                <!-- tailwind input with name: potassium -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="potassium">
+                        Potassium
+                    </label>
+                    <!-- input tag with tailwind bg-gray-200 text-gray-700 border border-gray-200 rounded px-3 py-2 focus:outline-none focus:shadow-outline w-full -->
+                    <input
+                        class="bg-gray-200 text-gray-700 border border-gray-200 rounded px-3 py-2 focus:outline-none focus:shadow-outline w-full"
+                        type="text" name="potassium" id="potassium" placeholder="Enter your potassium">
+                </div>
+
+                <!-- tailwind input with name: haemoglobin -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="haemoglobin">
+                        Haemoglobin
+                    </label>
+                    <!-- input tag with tailwind bg-gray-200 text-gray-700 border border-gray-200 rounded px-3 py-2 focus:outline-none focus:shadow-outline w-full -->
+                    <input
+                        class="bg-gray-200 text-gray-700 border border-gray-200 rounded px-3 py-2 focus:outline-none focus:shadow-outline w-full"
+                        type="text" name="haemoglobin" id="haemoglobin" placeholder="Enter your haemoglobin">
+                </div>
+
+                <!-- tailwind input with name: packed_cell_volume -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="packed_cell_volume">
+                        Packed Cell Volume
+                    </label>
+                    <!-- input tag with tailwind bg-gray-200 text-gray-700 border border-gray-200 rounded px-3 py-2 focus:outline-none focus:shadow-outline w-full -->
+                    <input
+                        class="bg-gray-200 text-gray-700 border border-gray-200 rounded px-3 py-2 focus:outline-none focus:shadow-outline w-full"
+                        type="text" name="packed_cell_volume" id="packed_cell_volume"
+                        placeholder="Enter your packed cell volume">
+                </div>
+
+                <!-- tailwind input with name: white_blood_cell_count -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="white_blood_cell_count">
+                        White Blood Cell Count
+                    </label>
+                    <!-- input tag with tailwind bg-gray-200 text-gray-700 border border-gray-200 rounded px-3 py-2 focus:outline-none focus:shadow-outline w-full -->
+                    <input
+                        class="bg-gray-200 text-gray-700 border border-gray-200 rounded px-3 py-2 focus:outline-none focus:shadow-outline w-full"
+                        type="text" name="white_blood_cell_count" id="white_blood_cell_count"
+                        placeholder="Enter your white blood cell count">
+                </div>
+
+                <!-- tailwind input with name: red_blood_cell_count -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="red_blood_cell_count">
+                        Red Blood Cell Count
+                    </label>
+                    <!-- input tag with tailwind bg-gray-200 text-gray-700 border border-gray-200 rounded px-3 py-2 focus:outline-none focus:shadow-outline w-full -->
+                    <input
+                        class="bg-gray-200 text-gray-700 border border-gray-200 rounded px-3 py-2 focus:outline-none focus:shadow-outline w-full"
+                        type="text" name="red_blood_cell_count" id="red_blood_cell_count"
+                        placeholder="Enter your red blood cell count">
+                </div>
+
+
+                <!-- tailwind checkbox input with name: hypertension -->
+                <div class="mb-4">
+                    <input
+                        class="bg-gray-200 text-gray-700 border border-gray-200 rounded px-3 py-auto focus:outline-none focus:shadow-outline"
+                        type="checkbox" name="hypertension" id="hypertension">
+                    <label class="text-gray-700 text-sm font-bold mb-2" for="hypertension">
+                        has Hypertension
+                    </label>
+                </div>
+
+                <!-- tailwind checkbox input with name: diabetes_mellitus -->
+                <div class="mb-4">
+                    <input
+                        class="bg-gray-200 text-gray-700 border border-gray-200 rounded px-3 py-auto focus:outline-none focus:shadow-outline"
+                        type="checkbox" name="diabetes_mellitus" id="diabetes_mellitus">
+                    <label class="text-gray-700 text-sm font-bold mb-2" for="diabetes_mellitus">
+                        has Diabetes Mellitus
+                    </label>
+                </div>
+
+                <!-- tailwind checkbox input with name: coronary_artery_disease -->
+                <div class="mb-4">
+                    <input
+                        class="bg-gray-200 text-gray-700 border border-gray-200 rounded px-3 py-auto focus:outline-none focus:shadow-outline"
+                        type="checkbox" name="coronary_artery_disease" id="coronary_artery_disease">
+                    <label class="text-gray-700 text-sm font-bold mb-2" for="coronary_artery_disease">
+                        has Coronary Artery Disease
+                    </label>
+                </div>
+
+                <!-- tailwind checkbox input with name: appetite -->
+                <div class="mb-4">
+                    <input
+                        class="bg-gray-200 text-gray-700 border border-gray-200 rounded px-3 py-auto focus:outline-none focus:shadow-outline"
+                        type="checkbox" name="appetite" id="appetite">
+                    <label class="text-gray-700 text-sm font-bold mb-2" for="appetite">
+                        has Appetite
+                    </label>
+                </div>
+
+                <!-- tailwind checkbox input with name: peda_edema -->
+                <div class="mb-4">
+                    <input
+                        class="bg-gray-200 text-gray-700 border border-gray-200 rounded px-3 py-auto focus:outline-none focus:shadow-outline"
+                        type="checkbox" name="peda_edema" id="peda_edema">
+                    <label class="text-gray-700 text-sm font-bold mb-2" for="peda_edema">
+                        has Peda Edema
+                    </label>
+                </div>
+
+                <!-- tailwind checkbox input with name: anemia -->
+                <div class="mb-4">
+                    <input
+                        class="bg-gray-200 text-gray-700 border border-gray-200 rounded px-3 py-auto focus:outline-none focus:shadow-outline"
+                        type="checkbox" name="anemia" id="anemia">
+                    <label class="text-gray-700 text-sm font-bold mb-2" for="anemia">
+                        has anemia
+                    </label>
+                </div>
+
+
+
+
+
+
+                <!-- tailwind submit button -->
+                <button
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    type="submit">
+                    Check your risk
+                </button>
+
+            </form>
+
+        </div>
+</body>
+
+</html>
