@@ -17,8 +17,7 @@ dep_col = 'class'
 X = df[ind_col]
 y = df[dep_col]
 
-X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.30, random_state=0)
+X_train, _, y_train, _ = train_test_split(X, y, test_size=0.30, random_state=0)
 
 knn = KNeighborsClassifier()
 knn.fit(X_train, y_train)
@@ -31,18 +30,6 @@ gb.fit(X_train, y_train)
 
 etc = ExtraTreesClassifier()
 etc.fit(X_train, y_train)
-
-# 15.8,
-# 53.0,
-# 6800.0,
-# 6.1,
-# 0,
-# 0,
-# 0,
-# 0,
-# 0,
-# 0,
-# 1
 
 test_data = {
     'age': [58.0],
@@ -72,10 +59,6 @@ test_data = {
 }
 
 test_df = pd.DataFrame(test_data)
-
-# print(df.columns)
-# print(test_df.columns)
-
 print(etc.predict(test_df))
 
 app = Flask(__name__)
@@ -93,9 +76,7 @@ def check_api():
     print("********* debug line :" + str(values))
     values = {k: [float(v)] for k, v in values.items()}
     print("********* debug line :" + str(values))
-
     test = pd.DataFrame(values)
-
     return str(etc.predict(test))
 
 
