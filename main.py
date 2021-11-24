@@ -74,10 +74,18 @@ def upload_file():
 def check_api():
     values = request.form.to_dict()
     print("********* debug line :" + str(values))
-    values = {k: [float(v)] for k, v in values.items()}
+    values = {k: [float(v) if v != 'on' else 1] for k, v in values.items()}
+    left_keys = test_data.keys() - values.keys()
+    for key in left_keys:
+        values[key] = [0]
     print("********* debug line :" + str(values))
     test = pd.DataFrame(values)
-    return str(etc.predict(test))
+    result = etc.predict(test)[0]
+    print("********* debug line :" + str(result))
+    if result == 0:
+        return render_template('result_danger.html')
+    else:
+        return render_template('result_safe.html')
 
 
 app.run(host='localhost', port=5000, debug=True)
